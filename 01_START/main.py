@@ -4,6 +4,7 @@ from fastapi.templating import Jinja2Templates
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
+#초기 페이지
 @app.get("/")
 def read_root(request: Request):
     return templates.TemplateResponse("home.html", {"request": request})
